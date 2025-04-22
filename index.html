@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment Homepage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d6e4f0);
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #34495e);
+      width: 100%;
+      padding: 40px 20px 30px;
+      text-align: center;
+      color: #ecf0f1;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin: 4px 0;
+      letter-spacing: 0.5px;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .container a {
+      background-color: #34495e;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 15px 35px;
+      border-radius: 8px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .container a:hover {
+      background-color: #2c3e50;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 16px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container a {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My HTML & CSS Assignments</h1>
+    <p><strong>Name:</strong> Samruddhi Awate</p>
+    <p><strong>Roll No:</strong> 09</p>
+    <p><strong>Class:</strong> CSE 2nd Year</p>
+    <p><strong>Subject:</strong> Web Technology</p>
+  </header>
+
+  <div class="container">
+    <a href="http://127.0.0.1:5500/showcae/index1.html">HTML Assignments</a>
+    <a href="http://127.0.0.1:5500/css%20assignment/index2.html">CSS Assignments</a>
+    <a href="http://127.0.0.1:5500/xml/index3.html">XML Assignment</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Samruddhi Awate | All Rights Reserved
+  </footer>
+
+</body>
+</html>

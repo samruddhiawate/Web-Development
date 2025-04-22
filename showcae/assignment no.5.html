@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Avengers Image Showcase</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0fa;
+      padding: 20px;
+      color: #2c2c54;
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #4b3f72;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #4b3f72;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+    header {
+      background-color: #4b3f72;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      background-color: #4b3f72;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    /* Common styling for all images */
+    .same-size {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid #4b3f72;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: block;
+      margin: 10px auto;
+    }
+
+    .same-size:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Assignment No.05
+   
+  </header>
+
+  <h1>🦸‍♂️ Avengers Image Showcase</h1>
+
+  
+  <section>
+    <h2> Basic Image</h2>
+    <p>A simple image displayed without any attributes or styling.</p>
+    <img src="hulk.jpg" alt="Hulk" class="same-size">
+  </section>
+
+  
+  <section>
+    <h2> Image with Width and Height</h2>
+    <p>This image is manually resized using the width and height attributes.</p>
+    <img src="thor.jpg" alt="Thor" class="same-size">
+  </section>
+
+  
+  <section>
+    <h2> Image with CSS Styling</h2>
+    <p>Here we use CSS to add a border and rounded corners to the image.</p>
+    <img src="captain america.jpg" alt="Captain America" class="same-size">
+  </section>
+
+ 
+  <section>
+    <h2> Image Inside a Link</h2>
+    <p>Clicking this image will take you to the Wikipedia page of Avengers.</p>
+    <a href="https://en.wikipedia.org/wiki/The_Avengers_(2012_film)" target="_blank">
+      <img src="ironman.jpg" alt="Ironman" class="same-size">
+    </a>
+  </section>
+
+ 
+  <section>
+    <h2> Responsive Image</h2>
+    <p>The image adapts to the screen size using <code>srcset</code> and <code>sizes</code> attributes.</p>
+    <img 
+      src="spiderman.jpg" 
+      srcset="spiderman.jpg 300w, spiderman.jpg 600w"
+      sizes="(max-width: 600px) 100vw, 300px"
+      alt="Spiderman"
+      class="same-size"
+    >
+  </section>
+
+  
+  <section>
+    <h2> Lazy Loaded Image</h2>
+    <p>This image only loads when it appears in the viewport, improving page performance.</p>
+    <img 
+      src="wanda.jpg" 
+      alt="Wanda" 
+      loading="lazy" 
+      class="same-size"
+    >
+  </section>
+
+ 
+  <section>
+    <h2> Image with Long Description</h2>
+    <p>This image is accompanied by a long description attribute linking to more details.</p>
+    <img 
+      src="natahsa.jpg" 
+      alt="Natasha" 
+      longdesc="https://en.wikipedia.org/wiki/The_Avengers_(2012_film)"
+      class="same-size"
+    >
+  </section>
+
+  <footer>
+    Created by Samrruddhi Awate | S.Y (B) | Batch- S1 | Roll No.9
+  </footer>
+
+</body>
+</html>

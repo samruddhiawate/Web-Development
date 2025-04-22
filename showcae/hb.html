@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .gift-box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to bottom, #ff7675, #d63031);
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      animation: bounce 2s infinite;
+    }
+
+    .gift-box::before, .gift-box::after {
+      content: '';
+      position: absolute;
+      background: #ffeaa7;
+    }
+
+    .gift-box::before {
+      width: 200px;
+      height: 20px;
+      top: 90px;
+      left: 0;
+    }
+
+    .gift-box::after {
+      width: 20px;
+      height: 200px;
+      top: 0;
+      left: 90px;
+    }
+
+    .lid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100px;
+      background: linear-gradient(to bottom, #d63031, #e84393);
+      border-radius: 10px 10px 0 0;
+      transform-origin: top;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+.hidden text{
+    Happy Birthday Kaustubh
+}
+    .hidden-images {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .hidden-images img {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <b>happy birthday kaustubh</b>
+  <div class="gift-box" id="giftBox">
+    <div class="lid" id="giftLid"></div>
+  </div>
+  <div class="hidden-text" id="hidden-text">
+    
+  </div>
+  <div class="hidden-images" id="hiddenImages">
+  
+    <img src="baby.jpg" alt="Happy Birthday" height="500">
+    
+    
+  </div>
+  <audio id="birthdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+  <script>
+    const giftBox = document.getElementById('giftBox');
+    const giftLid = document.getElementById('giftLid');
+    const hiddenImages = document.getElementById('hiddenImages');
+    const birthdaySong = document.getElementById('birthdaySong');
+
+    giftBox.addEventListener('click', () => {
+      // Play the birthday song
+      birthdaySong.play();
+
+      // Animate the lid opening
+      giftLid.style.transform = 'rotateX(-120deg)';
+
+      // Reveal images one by one
+      setTimeout(() => {
+        hiddenImages.style.display = 'block';
+        const images = hiddenImages.querySelectorAll('img');
+        images.forEach((img, index) => {
+          setTimeout(() => {
+            img.style.animationDelay = `${index * 1.5}s`;
+            img.style.opacity = '1';
+          }, index * 1500);
+        });
+      }, 1000); // Wait for the lid animation to complete
+    });
+  </script>
+</body>
+</html>

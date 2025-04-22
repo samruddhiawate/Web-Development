@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anchor Tag Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f4f0ff;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.7rem;
+      color: #4b3f72;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4b0082;
+      margin-bottom: 20px;
+    }
+
+    header {
+      background-color: #4b3f72;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      background-color: #4b3f72;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    .section {
+      background-color: #efe3ff;
+      margin: 25px auto;
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      border: 1.2px solid #6a0dad;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 17px;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    a {
+      text-decoration: none;
+      color: #6a0dad;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: 2px solid #6a0dad;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    a:hover {
+      background-color: #6a0dad;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    img {
+      margin-top: 10px;
+      width: 100px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    hr {
+      border: none;
+      height: 3px;
+      background-color: #d7b4f3;
+      width: 50%;
+      margin: 40px auto;
+      border-radius: 5px;
+    }
+
+   
+  </style>
+</head>
+<body>
+  <header>
+    Assignment No.07
+   
+  </header>
+
+
+  <h1>Anchor Tag :</h1>
+  <hr />
+
+  <div class="section">
+    <p>External Link</p>
+    <a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a>
+  </div>
+
+  <div class="section">
+    <p>Internal Link</p>
+    <a href="#section2">Go to Section 2</a>
+  </div>
+
+  <div class="section">
+    <p>Mailto Link</p>
+    <a href="mailto:someone@example.com">Send an Email</a>
+  </div>
+
+  <div class="section">
+    <p>Phone Number Link</p>
+    <a href="tel:+1234567890">Call Us</a>
+  </div>
+
+  <div class="section">
+    <p>Download Link</p>
+    <a href="SY-CSE-NEP-Syllabus (6).pdf" download>Download PDF</a>
+  </div>
+
+  <div class="section" id="section2">
+    <h2>Link with Image</h2>
+    <a href="https://www.google.co.in/">
+      <img src="google.jpg" alt="Google Logo" />
+    </a>
+  </div>
+
+  <hr />
+</body>
+<footer>
+  Created by Samrruddhi Awate | S.Y (B) | Batch- S1 | Roll No.9
+</footer>
+</html>
