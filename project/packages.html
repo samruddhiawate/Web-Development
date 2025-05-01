@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Featured Packages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .packages-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .packages-section h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .packages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      justify-content: center;
+    }
+
+    .package-card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      padding: 30px;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(60px);
+      animation: slideUp 0.8s forwards;
+    }
+
+    .package-card img {
+      width: 100%;
+      height: 250px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .package-card h3 {
+      margin: 20px 0 10px;
+      font-size: 24px;
+    }
+
+    .package-card p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      color:  #123458;
+      margin-top: 10px;
+    }
+
+    .book-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #123458 ;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      display: inline-block;
+      
+    }
+
+    .read-more-container {
+      margin-top: 50px;
+    }
+
+    .read-more-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      background-color: #123458;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.5s; }
+    .delay-3 { animation-delay: 0.8s; }
+
+    @media (max-width: 768px) {
+      .packages {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .book-btn:hover,
+.read-more-btn:hover {
+background-color: #000;
+color: #fff;
+}
+
+    
+  </style>
+</head>
+<body>
+  <section class="packages-section">
+    <h2>Featured Packages</h2>
+    <p class="subtitle">We will help you find the trip that's perfect for you!</p>
+    <div class="packages">
+      <div class="package-card delay-1">
+        <img src="kerala backwater.jpg" alt="Kerala">
+        <h3>Kerala City Tour</h3>
+        <p>Explore the vibrant culture and stunning landscapes of Kerala's bustling cities.</p>
+        <p class="price">Rs.21000</p>
+        <a href="details.html" class="book-btn">Book Now</a>
+      </div>
+      <div class="package-card delay-2">
+        <img src="kashmir img.jpg" alt="kashmir">
+        <h3>Kashmir City Tour</h3>
+        <p>Immerse yourself in the rich culture and stunning landscapes of Kashmir.</p>
+        <p class="price">Rs.26000</p>
+        <a href="details.html" class="book-btn">Book Now</a>
+      </div>
+      <div class="package-card delay-3">
+        <img src="amrister.jpg" alt="amritser">
+        <h3>Golden Temple City Tour</h3>
+        <p>Experience the vibrant blend of culture, cuisine, and cutting-edge architecture.</p>
+        <p class="price">Rs.15000</p>
+        <a href="details.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <div class="read-more-container">
+      <a href="details.html" class="read-more-btn">Read More</a>
+    </div>
+  </section>
+
+  <script>
+    
+    const bookButtons = document.querySelectorAll('.book-btn');
+  
+    bookButtons.forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        alert('Booking feature coming soon!'); 
+      });
+    });
+  </script>
+  
+</body>
+</html>
